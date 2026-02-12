@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  Menu, 
-  X, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  ChevronRight, 
+import {
+  Menu,
+  X,
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  ChevronRight,
   CheckCircle2,
   Calendar,
   Coffee,
@@ -45,9 +45,9 @@ const App: React.FC = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex-shrink-0 flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <div className="flex flex-col items-center">
-                <img 
-                  src="https://raw.githubusercontent.com/Smile-Factory-Brno/web/main/logo-white.png" 
-                  alt="SMILE FACTORY Logo" 
+                <img
+                  src="https://raw.githubusercontent.com/Smile-Factory-Brno/web/main/logo-white.png"
+                  alt="SMILE FACTORY Logo"
                   className="h-12 w-auto brightness-0 invert"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
@@ -65,7 +65,7 @@ const App: React.FC = () => {
                 />
               </div>
             </div>
-            
+
             <div className="hidden md:flex items-center space-x-8">
               <button onClick={() => scrollToSection('about')} className="text-white/90 hover:text-white transition-colors font-semibold">O nás</button>
               <button onClick={() => scrollToSection('team')} className="text-white/90 hover:text-white transition-colors font-semibold">Tým</button>
@@ -98,13 +98,13 @@ const App: React.FC = () => {
               <button onClick={() => scrollToSection('prices')} className="block w-full text-left px-3 py-4 text-base font-semibold text-white hover:bg-white/10">Ceník</button>
               <button onClick={() => scrollToSection('contact')} className="block w-full text-left px-3 py-4 text-base font-semibold text-white hover:bg-white/10">Kontakt</button>
               <div className="pt-4 flex flex-col gap-4">
-                 <a href="tel:+420607027707" className="flex items-center justify-center gap-2 text-white font-bold py-4 bg-white/10 rounded-xl">
-                    <Phone className="w-5 h-5" />
-                    607 027 707
-                  </a>
-                  <button onClick={() => scrollToSection('booking')} className="w-full bg-white text-[#793f66] py-4 rounded-xl font-bold text-lg">
-                    Objednat online
-                  </button>
+                <a href="tel:+420607027707" className="flex items-center justify-center gap-2 text-white font-bold py-4 bg-white/10 rounded-xl">
+                  <Phone className="w-5 h-5" />
+                  607 027 707
+                </a>
+                <button onClick={() => scrollToSection('booking')} className="w-full bg-white text-[#793f66] py-4 rounded-xl font-bold text-lg">
+                  Objednat online
+                </button>
               </div>
             </div>
           </div>
@@ -135,7 +135,7 @@ const App: React.FC = () => {
                   Naše služby
                 </button>
               </div>
-              
+
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-8">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5 text-green-500" />
@@ -151,7 +151,7 @@ const App: React.FC = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="mt-16 lg:mt-0 lg:w-1/2 relative">
               <div className="aspect-[4/5] w-full max-w-lg mx-auto overflow-hidden rounded-[40px] shadow-2xl relative">
                 <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800&h=1000" alt="SMILE FACTORY Dental Clinic" className="w-full h-full object-cover" />
@@ -193,7 +193,7 @@ const App: React.FC = () => {
                 </a>
               </div>
             </div>
-            
+
             <div className="bg-white p-8 rounded-[32px] shadow-lg border border-slate-100 flex items-start gap-6 hover:translate-y-[-4px] transition-transform">
               <div className="w-14 h-14 bg-[#fdf8fb] rounded-2xl flex items-center justify-center shrink-0">
                 <Clock className="w-7 h-7 text-[#793f66]" />
@@ -249,7 +249,7 @@ const App: React.FC = () => {
               Chci se objednat
             </button>
           </div>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {SERVICES.map((service) => (
               <div key={service.id} className="group p-8 rounded-[40px] bg-slate-50 border border-transparent hover:border-[#f2e8ef] hover:bg-white hover:shadow-xl transition-all duration-300">
@@ -274,19 +274,19 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:flex lg:items-center lg:gap-20">
             <div className="lg:w-1/2 mb-12 lg:mb-0 relative">
-               <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-4">
-                    <img src="https://images.unsplash.com/photo-1445527815219-ecbfec67492e?auto=format&fit=crop&q=80&w=400&h=300" alt="Dental Office Interior" className="rounded-[40px] shadow-lg w-full object-cover aspect-[4/3]" />
-                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=400&h=500" alt="Dental Care" className="rounded-[40px] shadow-lg w-full object-cover aspect-[4/5]" />
-                  </div>
-                  <div className="space-y-4 pt-12">
-                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=400&h=500" alt="Medical Technology" className="rounded-[40px] shadow-lg w-full object-cover aspect-[4/5]" />
-                    <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=400&h=300" alt="Consultation Room" className="rounded-[40px] shadow-lg w-full object-cover aspect-[4/3]" />
-                  </div>
-               </div>
-               <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[#f2e8ef]/50 rounded-full blur-3xl"></div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-4">
+                  <img src="https://images.unsplash.com/photo-1445527815219-ecbfec67492e?auto=format&fit=crop&q=80&w=400&h=300" alt="Dental Office Interior" className="rounded-[40px] shadow-lg w-full object-cover aspect-[4/3]" />
+                  <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=400&h=500" alt="Dental Care" className="rounded-[40px] shadow-lg w-full object-cover aspect-[4/5]" />
+                </div>
+                <div className="space-y-4 pt-12">
+                  <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=400&h=500" alt="Medical Technology" className="rounded-[40px] shadow-lg w-full object-cover aspect-[4/5]" />
+                  <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=400&h=300" alt="Consultation Room" className="rounded-[40px] shadow-lg w-full object-cover aspect-[4/3]" />
+                </div>
+              </div>
+              <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[#f2e8ef]/50 rounded-full blur-3xl"></div>
             </div>
-            
+
             <div className="lg:w-1/2 space-y-10">
               <div>
                 <span className="text-[#793f66] font-bold uppercase tracking-widest text-sm">Proč zvolit nás</span>
@@ -294,7 +294,7 @@ const App: React.FC = () => {
                   Klademe důraz na vaše pohodlí a bezstresový průběh
                 </h2>
               </div>
-              
+
               <div className="space-y-8">
                 <div className="flex gap-6">
                   <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shrink-0 shadow-sm">
@@ -305,7 +305,7 @@ const App: React.FC = () => {
                     <p className="text-slate-600">Nad každým křeslem máme televizi. Můžete sledovat svůj oblíbený film nebo pohádku pro děti.</p>
                   </div>
                 </div>
-                
+
                 <div className="flex gap-6">
                   <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shrink-0 shadow-sm">
                     <Coffee className="w-7 h-7 text-[#793f66]" />
@@ -315,7 +315,7 @@ const App: React.FC = () => {
                     <p className="text-slate-600">Vychutnejte si skvělou kávu v naší klidné zóně se zahradou přímo v historickém centru Brna.</p>
                   </div>
                 </div>
-                
+
                 <div className="flex gap-6">
                   <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shrink-0 shadow-sm">
                     <Baby className="w-7 h-7 text-[#793f66]" />
@@ -326,7 +326,7 @@ const App: React.FC = () => {
                   </div>
                 </div>
               </div>
-              
+
               <button onClick={() => scrollToSection('team')} className="bg-white text-[#793f66] border-2 border-[#793f66] px-10 py-4 rounded-full font-bold hover:bg-[#fdf8fb] transition-all">
                 Dozvědět se o našem týmu
               </button>
@@ -343,15 +343,15 @@ const App: React.FC = () => {
             <h2 className="text-4xl font-extrabold text-slate-900 mt-4 mb-4">Náš tým</h2>
             <div className="w-24 h-1 bg-[#793f66] mx-auto rounded-full"></div>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
             {TEAM.map((member, idx) => (
               <div key={idx} className="flex flex-col sm:flex-row gap-8 items-start sm:items-center p-6 rounded-3xl hover:bg-white transition-all group shadow-sm hover:shadow-md">
                 <div className="w-40 h-40 shrink-0 relative">
                   <div className="absolute inset-0 bg-[#793f66]/10 rounded-full scale-110 group-hover:scale-125 transition-transform duration-500"></div>
-                  <img 
-                    src={member.image} 
-                    alt={member.name} 
+                  <img
+                    src={member.image}
+                    alt={member.name}
                     className="w-full h-full object-cover rounded-full shadow-lg relative z-10 grayscale group-hover:grayscale-0 transition-all duration-500"
                   />
                 </div>
@@ -378,7 +378,7 @@ const App: React.FC = () => {
               Uvedené ceny jsou orientační. Konečná cena závisí na individuálním léčebném plánu a použitých materiálech.
             </p>
           </div>
-          
+
           <div className="bg-white border border-slate-100 rounded-[40px] shadow-2xl overflow-hidden">
             <div className="divide-y divide-slate-100">
               {PRICES.map((item, idx) => (
@@ -422,7 +422,7 @@ const App: React.FC = () => {
                 <h2 className="text-4xl font-extrabold text-slate-900 mt-4">Kde nás najdete?</h2>
                 <p className="text-slate-600 mt-4">Náš tým je připraven vám pomoci. Zavolejte nám nebo napište email.</p>
               </div>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start gap-6">
                   <div className="w-12 h-12 bg-[#fdf8fb] rounded-xl flex items-center justify-center shrink-0">
@@ -433,7 +433,7 @@ const App: React.FC = () => {
                     <a href="tel:+420607027707" className="text-xl font-bold text-slate-900 hover:text-[#793f66] transition-colors">+420 607 027 707</a>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-6">
                   <div className="w-12 h-12 bg-[#fdf8fb] rounded-xl flex items-center justify-center shrink-0">
                     <Mail className="w-6 h-6 text-[#793f66]" />
@@ -443,7 +443,7 @@ const App: React.FC = () => {
                     <a href="mailto:info@smilefactory.cz" className="text-xl font-bold text-slate-900 hover:text-[#793f66] transition-colors">info@smilefactory.cz</a>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-6">
                   <div className="w-12 h-12 bg-[#fdf8fb] rounded-xl flex items-center justify-center shrink-0">
                     <MapPin className="w-6 h-6 text-[#793f66]" />
@@ -454,20 +454,20 @@ const App: React.FC = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="p-8 bg-slate-900 rounded-[40px] text-white space-y-4">
                 <h4 className="text-xl font-bold">V centru Brna</h4>
                 <p className="text-slate-400">Nacházíme se mezi ulicí Česká a Náměstím Svobody. Parkování je možné v přilehlých parkovacích domech.</p>
                 <div className="pt-4 flex gap-4">
-                  <a 
-                    href="https://maps.app.goo.gl/csivj7KUDtDXVDiL8" 
-                    target="_blank" 
+                  <a
+                    href="https://maps.app.goo.gl/csivj7KUDtDXVDiL8"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 block h-48 rounded-3xl overflow-hidden shadow-inner group relative"
                   >
-                    <img 
-                      src="map.png" 
-                      alt="Mapa SMILE FACTORY Brno" 
+                    <img
+                      src="/map.png"
+                      alt="Mapa SMILE FACTORY Brno"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors"></div>
@@ -478,7 +478,7 @@ const App: React.FC = () => {
                 </div>
               </div>
             </div>
-            
+
             <div id="booking" className="lg:w-1/2">
               <div className="bg-slate-50 p-8 sm:p-12 rounded-[48px] border border-slate-100 shadow-xl shadow-slate-200/50">
                 <h3 className="text-3xl font-extrabold text-slate-900 mb-8">Rezervujte si termín</h3>
@@ -530,9 +530,9 @@ const App: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
             <div className="space-y-6 text-center md:text-left">
               <div className="flex flex-col items-center md:items-start cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                <img 
-                  src="https://raw.githubusercontent.com/Smile-Factory-Brno/web/main/logo-white.png" 
-                  alt="SMILE FACTORY Logo" 
+                <img
+                  src="https://raw.githubusercontent.com/Smile-Factory-Brno/web/main/logo-white.png"
+                  alt="SMILE FACTORY Logo"
                   className="h-16 w-auto mb-4 brightness-0 invert"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
@@ -557,7 +557,7 @@ const App: React.FC = () => {
                 <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#793f66] transition-colors">ig</a>
               </div>
             </div>
-            
+
             <div>
               <h4 className="text-xl font-bold mb-8">Menu</h4>
               <ul className="space-y-4 text-slate-400">
@@ -569,7 +569,7 @@ const App: React.FC = () => {
                 <li><button className="hover:text-[#793f66] transition-colors">Kariéra</button></li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="text-xl font-bold mb-8">Kontakt</h4>
               <ul className="space-y-4 text-slate-400">
@@ -587,7 +587,7 @@ const App: React.FC = () => {
                 </li>
               </ul>
             </div>
-            
+
             <div className="bg-slate-800 p-8 rounded-3xl space-y-4">
               <h4 className="text-lg font-bold">Odebírejte novinky</h4>
               <p className="text-sm text-slate-400">Dostávejte tipy na péči o zuby a informace o nových službách.</p>
@@ -597,7 +597,7 @@ const App: React.FC = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="pt-12 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6 text-slate-500 text-sm">
             <p>© {new Date().getFullYear()} SMILE FACTORY Brno. Všechna práva vyhrazena.</p>
             <div className="flex gap-8">
