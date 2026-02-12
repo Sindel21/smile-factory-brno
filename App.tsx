@@ -50,7 +50,11 @@ const App: React.FC = () => {
       <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-[#793f66] shadow-xl py-2' : 'bg-[#793f66]/90 backdrop-blur-md py-4'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="flex-shrink-0 flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <button
+              className="flex-shrink-0 flex items-center gap-2 cursor-pointer"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              aria-label="Zpět nahoru"
+            >
               <div className="flex flex-col items-center">
                 <img
                   src="https://raw.githubusercontent.com/Smile-Factory-Brno/web/main/logo-white.png"
@@ -71,7 +75,7 @@ const App: React.FC = () => {
                   }}
                 />
               </div>
-            </div>
+            </button>
 
             <div className="hidden md:flex items-center space-x-8">
               <button onClick={() => scrollToSection('about')} className="text-white/90 hover:text-white transition-colors font-semibold">O nás</button>
@@ -89,7 +93,12 @@ const App: React.FC = () => {
             </div>
 
             <div className="md:hidden flex items-center">
-              <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-white">
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="text-white"
+                aria-label={isMenuOpen ? "Zavřít menu" : "Otevřít menu"}
+                aria-expanded={isMenuOpen}
+              >
                 {isMenuOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
               </button>
             </div>
@@ -500,21 +509,21 @@ const App: React.FC = () => {
                 <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label className="text-sm font-bold text-slate-700 ml-2">Vaše jméno</label>
-                      <input type="text" placeholder="Jan Novák" className="w-full px-6 py-4 rounded-2xl border border-slate-200 focus:border-[#793f66] focus:ring-4 focus:ring-[#793f66]/10 outline-none transition-all" />
+                      <label htmlFor="name" className="text-sm font-bold text-slate-700 ml-2">Vaše jméno</label>
+                      <input id="name" type="text" placeholder="Jan Novák" className="w-full px-6 py-4 rounded-2xl border border-slate-200 focus:border-[#793f66] focus:ring-4 focus:ring-[#793f66]/10 outline-none transition-all" />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-sm font-bold text-slate-700 ml-2">Telefonní číslo</label>
-                      <input type="tel" placeholder="+420 123 456 789" className="w-full px-6 py-4 rounded-2xl border border-slate-200 focus:border-[#793f66] focus:ring-4 focus:ring-[#793f66]/10 outline-none transition-all" />
+                      <label htmlFor="phone" className="text-sm font-bold text-slate-700 ml-2">Telefonní číslo</label>
+                      <input id="phone" type="tel" placeholder="+420 123 456 789" className="w-full px-6 py-4 rounded-2xl border border-slate-200 focus:border-[#793f66] focus:ring-4 focus:ring-[#793f66]/10 outline-none transition-all" />
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-slate-700 ml-2">Emailová adresa</label>
-                    <input type="email" placeholder="vas@email.cz" className="w-full px-6 py-4 rounded-2xl border border-slate-200 focus:border-[#793f66] focus:ring-4 focus:ring-[#793f66]/10 outline-none transition-all" />
+                    <label htmlFor="email" className="text-sm font-bold text-slate-700 ml-2">Emailová adresa</label>
+                    <input id="email" type="email" placeholder="vas@email.cz" className="w-full px-6 py-4 rounded-2xl border border-slate-200 focus:border-[#793f66] focus:ring-4 focus:ring-[#793f66]/10 outline-none transition-all" />
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-slate-700 ml-2">O jakou službu máte zájem?</label>
-                    <select className="w-full px-6 py-4 rounded-2xl border border-slate-200 bg-white focus:border-[#793f66] focus:ring-4 focus:ring-[#793f66]/10 outline-none transition-all appearance-none cursor-pointer">
+                    <label htmlFor="service" className="text-sm font-bold text-slate-700 ml-2">O jakou službu máte zájem?</label>
+                    <select id="service" className="w-full px-6 py-4 rounded-2xl border border-slate-200 bg-white focus:border-[#793f66] focus:ring-4 focus:ring-[#793f66]/10 outline-none transition-all appearance-none cursor-pointer">
                       <option>Vstupní vyšetření</option>
                       <option>Dentální hygiena</option>
                       <option>Bělení zubů</option>
@@ -523,8 +532,8 @@ const App: React.FC = () => {
                     </select>
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-slate-700 ml-2">Vaše zpráva (volitelné)</label>
-                    <textarea rows={4} placeholder="Doplňující informace pro lékaře..." className="w-full px-6 py-4 rounded-2xl border border-slate-200 focus:border-[#793f66] focus:ring-4 focus:ring-[#793f66]/10 outline-none transition-all resize-none"></textarea>
+                    <label htmlFor="message" className="text-sm font-bold text-slate-700 ml-2">Vaše zpráva (volitelné)</label>
+                    <textarea id="message" rows={4} placeholder="Doplňující informace pro lékaře..." className="w-full px-6 py-4 rounded-2xl border border-slate-200 focus:border-[#793f66] focus:ring-4 focus:ring-[#793f66]/10 outline-none transition-all resize-none"></textarea>
                   </div>
                   <button className="w-full bg-[#793f66] text-white py-5 rounded-2xl font-extrabold text-xl shadow-xl shadow-[#793f66]/30 hover:bg-[#613252] hover:translate-y-[-2px] active:scale-95 transition-all">
                     Odeslat poptávku
@@ -544,7 +553,11 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
             <div className="space-y-6 text-center md:text-left">
-              <div className="flex flex-col items-center md:items-start cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+              <button
+                className="flex flex-col items-center md:items-start cursor-pointer"
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                aria-label="Zpět nahoru"
+              >
                 <img
                   src="https://raw.githubusercontent.com/Smile-Factory-Brno/web/main/logo-white.png"
                   alt="SMILE FACTORY Logo"
@@ -563,13 +576,13 @@ const App: React.FC = () => {
                     `;
                   }}
                 />
-              </div>
+              </button>
               <p className="text-slate-400 leading-relaxed max-w-xs mx-auto md:mx-0">
                 Rodinná zubní klinika v Brně poskytující špičkovou moderní péči v srdci města.
               </p>
               <div className="flex justify-center md:justify-start gap-4">
-                <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#793f66] transition-colors">f</a>
-                <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#793f66] transition-colors">ig</a>
+                <a href="#" aria-label="Facebook" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#793f66] transition-colors">f</a>
+                <a href="#" aria-label="Instagram" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[#793f66] transition-colors">ig</a>
               </div>
             </div>
 
@@ -607,8 +620,8 @@ const App: React.FC = () => {
               <h4 className="text-lg font-bold">Odebírejte novinky</h4>
               <p className="text-sm text-slate-400">Dostávejte tipy na péči o zuby a informace o nových službách.</p>
               <div className="relative">
-                <input type="email" placeholder="Emailová adresa" className="w-full bg-slate-700 border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-[#793f66] outline-none" />
-                <button className="absolute right-2 top-2 bottom-2 bg-[#793f66] text-white text-xs px-4 rounded-lg font-bold">OK</button>
+                <input type="email" placeholder="Emailová adresa" aria-label="Váš email pro newsletter" className="w-full bg-slate-700 border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-[#793f66] outline-none" />
+                <button aria-label="Přihlásit k odběru" className="absolute right-2 top-2 bottom-2 bg-[#793f66] text-white text-xs px-4 rounded-lg font-bold">OK</button>
               </div>
             </div>
           </div>
