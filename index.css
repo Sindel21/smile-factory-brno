@@ -1,0 +1,29 @@
+body {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Custom purple theme colors based on the image */
+.bg-smile-light {
+  background-color: #fdf8fb;
+}
+
+.text-smile-primary {
+  color: #793f66;
+}
+
+.border-smile-primary {
+  border-color: #793f66;
+}
+
+.bg-smile-primary {
+  background-color: #793f66;
+}
+
+.hover-bg-smile-primary:hover {
+  background-color: #613252;
+}
+
+.shadow-smile {
+  box-shadow: 0 10px 15px -3px rgba(121, 63, 102, 0.2), 0 4px 6px -2px rgba(121, 63, 102, 0.1);
+}
