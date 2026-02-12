@@ -66,11 +66,8 @@ const App: React.FC = () => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = `
                       <div class="flex flex-col items-center text-white">
-                        <div class="flex gap-0.5 mb-0.5">
-                          <span class="text-lg">☺☺☺☺</span>
-                        </div>
                         <span class="text-xl font-bold tracking-tight leading-none">SMILE FACTORY</span>
-                        <div class="w-full h-[1px] bg-white my-0.5"></div>
+                        <div class="w-full h-[1px] bg-white my-1 opacity-50"></div>
                         <span class="text-[8px] uppercase tracking-[0.3em] font-medium">Zubní klinika</span>
                       </div>
                     `;
@@ -581,12 +578,9 @@ const App: React.FC = () => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = `
                       <div class="flex flex-col items-center md:items-start text-white">
-                        <div class="flex gap-0.5 mb-1">
-                          <span class="text-2xl">☺☺☺☺</span>
-                        </div>
-                        <span class="text-3xl font-bold tracking-tight leading-none">SMILE FACTORY</span>
-                        <div class="w-full h-[1px] bg-white my-1"></div>
-                        <span class="text-xs uppercase tracking-[0.4em] font-medium">Zubní klinika</span>
+                        <span class="text-2xl font-bold tracking-tight leading-none">SMILE FACTORY</span>
+                        <div class="w-full h-[1px] bg-white my-2 opacity-50"></div>
+                        <span class="text-[10px] uppercase tracking-[0.3em] font-medium">Zubní klinika</span>
                       </div>
                     `;
                   }}
