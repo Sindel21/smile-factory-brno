@@ -57,7 +57,7 @@ const App: React.FC = () => {
             >
               <div className="flex flex-col items-center">
                 <img
-                  src="https://raw.githubusercontent.com/Smile-Factory-Brno/web/main/logo-white.png"
+                  src="/logo-white.png"
                   alt="SMILE FACTORY Logo"
                   className="h-12 w-auto brightness-0 invert"
                   width="180"
@@ -572,7 +572,7 @@ const App: React.FC = () => {
                 aria-label="Zpět nahoru"
               >
                 <img
-                  src="https://raw.githubusercontent.com/Smile-Factory-Brno/web/main/logo-white.png"
+                  src="/logo-white.png"
                   alt="SMILE FACTORY Logo"
                   className="h-16 w-auto mb-4 brightness-0 invert"
                   width="240"
