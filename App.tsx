@@ -358,6 +358,7 @@ const App: React.FC = () => {
                     src={member.image}
                     alt={member.name}
                     className="w-full h-full object-cover rounded-full shadow-lg relative z-10 grayscale group-hover:grayscale-0 transition-all duration-500"
+                    loading="lazy"
                   />
                 </div>
                 <div className="space-y-3">
