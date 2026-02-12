@@ -154,7 +154,12 @@ const App: React.FC = () => {
 
             <div className="mt-16 lg:mt-0 lg:w-1/2 relative">
               <div className="aspect-[4/5] w-full max-w-lg mx-auto overflow-hidden rounded-[40px] shadow-2xl relative">
-                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800&h=1000" alt="SMILE FACTORY Dental Clinic" className="w-full h-full object-cover" />
+                <img
+                  src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800"
+                  alt="SMILE FACTORY Dental Clinic"
+                  className="w-full h-full object-cover"
+                  fetchpriority="high"
+                />
                 <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-6 rounded-3xl border border-white/20 shadow-lg">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-200">
