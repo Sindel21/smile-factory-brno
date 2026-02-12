@@ -60,6 +60,8 @@ const App: React.FC = () => {
                   src="https://raw.githubusercontent.com/Smile-Factory-Brno/web/main/logo-white.png"
                   alt="SMILE FACTORY Logo"
                   className="h-12 w-auto brightness-0 invert"
+                  width="180"
+                  height="48"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = `
@@ -181,7 +183,13 @@ const App: React.FC = () => {
                 <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md p-6 rounded-3xl border border-white/20 shadow-lg">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full overflow-hidden bg-slate-200">
-                      <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=100&h=100" alt="Doctor Profile" />
+                      <img
+                        src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=100&h=100"
+                        alt="Doctor Profile"
+                        width="48"
+                        height="48"
+                        loading="lazy"
+                      />
                     </div>
                     <div>
                       <p className="font-bold text-slate-900">MDDr. Jana Beranovská</p>
@@ -299,12 +307,12 @@ const App: React.FC = () => {
             <div className="lg:w-1/2 mb-12 lg:mb-0 relative">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
-                  <img src="https://images.unsplash.com/photo-1445527815219-ecbfec67492e?auto=format&fit=crop&q=80&w=400&h=300" alt="Dental Office Interior" className="rounded-[40px] shadow-lg w-full object-cover aspect-[4/3]" />
-                  <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=400&h=500" alt="Dental Care" className="rounded-[40px] shadow-lg w-full object-cover aspect-[4/5]" />
+                  <img src="https://images.unsplash.com/photo-1445527815219-ecbfec67492e?auto=format&fit=crop&q=80&w=400&h=300" alt="Dental Office Interior" className="rounded-[40px] shadow-lg w-full object-cover aspect-[4/3]" width="400" height="300" loading="lazy" />
+                  <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=400&h=500" alt="Dental Care" className="rounded-[40px] shadow-lg w-full object-cover aspect-[4/5]" width="400" height="500" loading="lazy" />
                 </div>
                 <div className="space-y-4 pt-12">
-                  <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=400&h=500" alt="Medical Technology" className="rounded-[40px] shadow-lg w-full object-cover aspect-[4/5]" />
-                  <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=400&h=300" alt="Consultation Room" className="rounded-[40px] shadow-lg w-full object-cover aspect-[4/3]" />
+                  <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=400&h=500" alt="Medical Technology" className="rounded-[40px] shadow-lg w-full object-cover aspect-[4/5]" width="400" height="500" loading="lazy" />
+                  <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=400&h=300" alt="Consultation Room" className="rounded-[40px] shadow-lg w-full object-cover aspect-[4/3]" width="400" height="300" loading="lazy" />
                 </div>
               </div>
               <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[#f2e8ef]/50 rounded-full blur-3xl"></div>
@@ -377,6 +385,8 @@ const App: React.FC = () => {
                     alt={member.name}
                     className="w-full h-full object-cover rounded-full shadow-lg relative z-10 grayscale group-hover:grayscale-0 transition-all duration-500"
                     loading="lazy"
+                    width="160"
+                    height="160"
                   />
                 </div>
                 <div className="space-y-3">
@@ -493,6 +503,9 @@ const App: React.FC = () => {
                       src="/map.png"
                       alt="Mapa SMILE FACTORY Brno"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      width="600"
+                      height="400"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors"></div>
                     <div className="absolute bottom-4 right-4 bg-white text-slate-900 text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
@@ -554,7 +567,7 @@ const App: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
             <div className="space-y-6 text-center md:text-left">
               <button
-                className="flex flex-col items-center md:items-start cursor-pointer"
+                className="flex flex-col items-center md:items-start cursor-pointer transition-opacity hover:opacity-80"
                 onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 aria-label="Zpět nahoru"
               >
@@ -562,6 +575,8 @@ const App: React.FC = () => {
                   src="https://raw.githubusercontent.com/Smile-Factory-Brno/web/main/logo-white.png"
                   alt="SMILE FACTORY Logo"
                   className="h-16 w-auto mb-4 brightness-0 invert"
+                  width="240"
+                  height="64"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     e.currentTarget.parentElement!.innerHTML = `
